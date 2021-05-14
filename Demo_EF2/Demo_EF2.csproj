@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\" />
+    <EmbeddedResource Update="View\AddEmployee.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\ShowEmployeePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

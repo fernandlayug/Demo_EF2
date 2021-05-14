@@ -23,6 +23,28 @@ namespace Demo_EF2.ViewModel
             return res;
 
         }
-        public
+        public async Task<int>UpdateEmployee(EmployeeModel obj)
+        {
+            var _dbContext = getContext();
+            _dbContext.Employees.Update(obj);
+            int c = await _dbContext.SaveChangesAsync();
+            return c;
+        }
+
+        public int InsertEmployee(EmployeeModel obj)
+        {
+            var _dbContext = getContext();
+            _dbContext.Employees.Add(obj);
+            int c = _dbContext.SaveChanges();
+            return c;
+        }
+
+        public int DeleteEmployee(EmployeeModel obj)
+        {
+            var _dbContext = getContext();
+            _dbContext.Employees.Remove(obj);
+            int c = _dbContext.SaveChanges();
+            return c;
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace Demo_EF2
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new View.ShowEmployeePage());
         }
 
         protected override void OnStart()
